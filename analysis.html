@@ -1,0 +1,149 @@
+<!-- Set Up--> 
+<!DOCTYPE html>
+<html lang=“en”>
+
+<!-- Title & Metadata -->
+<head>
+	<title>NYC Bike Share Analysis</title>
+	<meta charset=”UTF-8”>
+
+    <!-- Imports -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+</head>
+
+<!-- Add all content to body -->
+<body>
+
+    <!-- NavBar -->
+    <nav id="nav" class="navbar sticky-top">
+        <img src="Resources/blue.jpg" width="50" height="50" class="d-inline-block align-top" alt="">
+        <a class="nav-link" href="index.html">Home </a>
+        <a class="nav-link" href="analysis.html">Analysis </a>
+        <a class="nav-link" href="bikeid.html">Bike Usage Check</a>
+    </nav>
+	
+    <!-- First question -->
+    <div class="row">
+        <div class="col-12">
+        <h1 class="ques"><b class="big">WHO</b><br> are the riders?</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+        <p id="para">*Stats are based on trips made not users</p>
+        </div>
+    </div>
+        
+    
+    <div class="row">
+        <div class="col-4" id="gender_plot"></div>
+        <div class="col-4" id="age_plot"></div>
+        <div class="col-3" id="user_plot"></div>
+        
+    </div>
+    
+    <div class="row">
+        <div class="col-7"></div>
+        <div class="col-5">
+        <p id="para">*A customer is someone who purchased <br>a 24-hour or 3-day pass, <br>Subscriber is an Annual Member</p>
+        </div>
+    </div>
+
+    <!-- Second question -->
+    <div class="row">
+        <div class="col-12">
+        <h1 class="ques"><b class="big">WHERE</b><br> are they going?</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+        <p id="para">This map displays all the start stations with the marker size determined by trip count</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-7" id="map"></div>
+        <div id="table2" class="col-3">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                 <th class="table-head">RANKING</th>
+                  <th class="table-head">STATION NAME</th>
+                  <th class="table-head">TRIPS TAKEN</th>
+                  <th class="table-head">STATION ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Grove St PATH</td>
+                    <td>57,472</td>
+                    <td>3186</td>
+                  </tr>
+                  <tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Exchange Place</td>
+                        <td>38,028</td>
+                        <td>3183</td>
+                      </tr>
+                      <tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Sip Ave</td>
+                            <td>34,274</td>
+                            <td>3195</td>
+                          </tr>
+                          <tr>
+                                                            
+              </tbody>
+            </table>
+          </div>
+    
+          <div class="col-1">
+        </div>
+        
+    </div>
+
+    <!-- Third question -->
+    <div class="row">
+        <div class="col-12">
+        <h1 class="ques"><b class="big">WHEN</b><br>do they ride?</h1>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10" id="weather_plot"></div>
+        
+    </div>
+
+    
+   
+	
+    <!-- Imports -->
+    <script src="Resources/user_data.js"></script>
+    <script src="Static/plots.js"></script>
+    <script src="Static/config.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+    
+    
+
+<!-- Close -->
+</body>
+</html>

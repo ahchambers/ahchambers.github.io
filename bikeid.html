@@ -1,0 +1,75 @@
+<!-- Set Up--> 
+<!DOCTYPE html>
+<html lang=“en”>
+
+<!-- Title & Metadata -->
+<head>
+	<title>NYC Bike Share Analysis</title>
+	<meta charset=”UTF-8”>
+
+    <!-- Imports -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+</head>
+
+<!-- Add all content to body -->
+<body class="image">
+
+    <!-- NavBar -->
+    <nav id="nav" class="navbar sticky-top">
+        <img src="Resources/blue.jpg" width="50" height="50" class="d-inline-block align-top" alt="">
+        <a class="nav-link" href="index.html">Home </a>
+        <a class="nav-link" href="analysis.html">Analysis </a>
+        <a class="nav-link" href="bikeid.html">Bike Usage Check</a>
+    </nav>
+	
+    <!-- Declare Row -->
+    <div class ="row">
+
+    <!-- Empty Space -->
+    <div class="col-1">
+    </div>
+
+    <div class="col-4">
+        <form>
+            <div id="bike_check" class="form-group">
+              <label for="exampleFormControlInput1">Enter a<br> <b id="number">BIKE ID</b><br>to check its usage </label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter BIKE ID">
+              <button id="bikeid_button" type="button" class="btn btn-outline-light">VIEW RESULTS</button>
+            </div>  
+    </div>
+
+    <div class="col-1">
+    </div>
+
+    <!-- Add Table -->
+    <div id="table" class="col-5">
+        <table class="table table-striped">
+          <thead>
+            <tr id="table_headers">
+              <th class="table-head">BIKE ID</th>
+              <th class="table-head">TRIPS TAKEN</th>
+              <th class="table-head">AVERAGE TRIP DURATION (mins)</th>
+              <th class="table-head">USAGE CATERGORY</th>
+
+            </tr>
+          </thead>
+          <tbody class="tbody">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-1">
+    </div>
+
+	
+    <!-- Imports -->
+    <script src="Resources/bike_usage.js"></script>
+    <script src="Static/app_BUC.js"></script>
+
+<!-- Close -->
+</body>
+</html>
